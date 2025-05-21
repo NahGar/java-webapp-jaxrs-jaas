@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Stateless
-@DeclareRoles({"ADMIN","USER"})
+@DeclareRoles({"USER","ADMIN"})
 public class CursoServiceImpl implements CursoService {
 
     @Inject
@@ -26,7 +26,7 @@ public class CursoServiceImpl implements CursoService {
     @Override
     @RolesAllowed({"ADMIN"})
     public Curso guardar(Curso curso) {
-        System.out.println("CURSO GUARDAR " + curso.getNombre());
+        //System.out.println("CURSO GUARDAR " + curso.getNombre());
         return repository.guardar(curso);
     }
 
